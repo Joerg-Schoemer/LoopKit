@@ -79,7 +79,6 @@ public struct CarbQuantityRow: View {
     private func updateQuantity(with input: String) {
         if let number = formatter.number(from: input) {
             quantity = number.doubleValue
-            print("quantity = \(quantity!)")
         } else {
             quantity = nil
         }
@@ -89,7 +88,6 @@ public struct CarbQuantityRow: View {
     private func updateCarbInput(with newQuantity: Double?) {
         if let value = newQuantity {
             carbInput = formatter.string(from: NSNumber(value: value)) ?? ""
-            print("carbInput = \(carbInput)")
         } else {
             carbInput = ""
         }
